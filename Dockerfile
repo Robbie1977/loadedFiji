@@ -5,4 +5,5 @@ ADD https://imagescience.org/meijering/software/download/TransformJ_.jar /opt/fi
 
 USER root 
 RUN chmod -R 777 /opt/fiji/Fiji.app/plugins
+RUN apt -y update && apt -y install imagemagick
 USER fiji
