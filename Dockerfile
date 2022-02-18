@@ -8,5 +8,4 @@ RUN chmod -R 777 /opt/fiji/Fiji.app/plugins
 RUN apt -y update && apt -y install imagemagick
 USER fiji
 
-RUN ImageJ-linux64 --update update || true
-RUN ImageJ-linux64 --update update
+RUN ImageJ-linux64 --headless --update update 
