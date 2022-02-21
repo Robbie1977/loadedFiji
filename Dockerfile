@@ -3,7 +3,7 @@ FROM fiji/fiji
 USER root 
 RUN chmod -R 777 /opt/fiji
 RUN apt -y update && apt -y install default-jre imagemagick
-USER Fiji
+USER fiji
 
 COPY plugins/ /opt/fiji/Fiji.app/plugins/
 
