@@ -7,7 +7,7 @@ USER fiji
 
 COPY plugins/*.jar /opt/fiji/Fiji.app/plugins/
 
-RUN echo "run("H5J Installer");" > /installer.ijm && ImageJ-linux64 -macro /installer.ijm 
+RUN echo 'run("H5J Installer");' > /opt/fiji/installer.ijm && ImageJ-linux64 -macro /opt/fiji/installer.ijm 
 
 RUN /opt/fiji/entrypoint.sh --update add-update-site ImageScience https://sites.imagej.net/ImageScience/
 RUN /opt/fiji/entrypoint.sh --update update || true
